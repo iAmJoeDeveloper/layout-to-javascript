@@ -3,12 +3,12 @@ const desktopMenu = document.querySelector('.desktop-menu')
 const burgerMenu = document.querySelector('.menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart')
-const aside = document.querySelector('.product-detail')
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer')
 const cardsContainer = document.querySelector('.cards-container')
 
 menuEmail.addEventListener('click', toggleDesktopMenu)
 burgerMenu.addEventListener('click', toggleMobileMenu)
-menuCarritoIcon.addEventListener('click', toggleCarritoAside)
+menuCarritoIcon.addEventListener('click', toggleCarritoShoppingCartContainer)
 
 function toggleDesktopMenu() {
 	// if (desktopMenu.classList.contains('inactive')) {
@@ -16,28 +16,28 @@ function toggleDesktopMenu() {
 	// } else {
 	// 	desktopMenu.classList.add('inactive')
 	// }
-	const isAsideClosed = aside.classList.contains('inactive')
+	const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains('inactive')
 
-	//If Aside is Open we must to closed it
-	if (!isAsideClosed) {
-		aside.classList.add('inactive')
+	//If ShoppingCartContainer is Open we must to closed it
+	if (!isShoppingCartContainerClosed) {
+		shoppingCartContainer.classList.add('inactive')
 	}
 
 	desktopMenu.classList.toggle('inactive')
 }
 
 function toggleMobileMenu() {
-	const isAsideClosed = aside.classList.contains('inactive')
+	const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains('inactive')
 
-	//If Aside is Open we must to closed it
-	if (!isAsideClosed) {
-		aside.classList.add('inactive')
+	//If ShoppingCartContainer is Open we must to closed it
+	if (!isShoppingCartContainerClosed) {
+		shoppingCartContainer.classList.add('inactive')
 	}
 
 	mobileMenu.classList.toggle('inactive')
 }
 
-function toggleCarritoAside() {
+function toggleCarritoShoppingCartContainer() {
 	const isMobileMenuClosed = mobileMenu.classList.contains('inactive')
 
 	//If Mobile Menu is Open we must to closed it
@@ -45,7 +45,7 @@ function toggleCarritoAside() {
 		mobileMenu.classList.add('inactive')
 	}
 
-	aside.classList.toggle('inactive')
+	shoppingCartContainer.classList.toggle('inactive')
 }
 
 // Refactorizar el codigo pasando la funcion con ejecución () => toggleMobileMenu(parametro)
