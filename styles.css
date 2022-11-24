@@ -264,7 +264,7 @@ aside {
 	border-radius: 0 0 20px 20px;
 }
 #product-detail {
-	margin: 24px 24px 0 24px;
+	/* margin: 24px 24px 0 24px; */
 }
 #product-detail p:nth-child(1) {
 	font-weight: bold;
@@ -342,6 +342,10 @@ aside {
 	margin-top: 0;
 	margin-bottom: 0;
 	color: var(--very-light-pink);
+}
+
+.product-info-secondary {
+	padding: 24px;
 }
 
 @media (max-width: 640px) {
